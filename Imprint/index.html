@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Imprint Elsword</title>
+  </head>
+
+  <body>
+    <div id="weaponselect" style="text-align: center;">
+      <h2>Escolha seu Tipo de Arma</h2>
+      <form>
+        <input
+          type="radio"
+          id="void"
+          name="weapon"
+          onclick="return weaponselect();"
+        />
+        <label for="void">Apocalipse Tipo-Vazio</label>
+        <input
+          type="radio"
+          id="flame"
+          name="weapon"
+          onclick="return weaponselect();"
+        />
+        <label for="flame">Chama da Condenação</label>
+      </form>
+    </div>
+    <div id="wrapperefeito" style="white-space: nowrap; text-align: center;">
+      <div id="efeito1" style="display: none; text-align: center; ">
+        <form id="primeiro">
+          <h2>Efeito 1</h2>
+          <div>
+            <p>Escarlate</p>
+            <select name="escarlate" id="causelist">
+              <option value="null">|| Selecione a Causa ||</option>
+            </select>
+          </div>
+          <div>
+            <p>Cerúleo</p>
+            <select name="ceruleo" id="chancelist">
+              <option value="null">|| Selecione a Chance ||</option>
+            </select>
+          </div>
+          <div>
+            <p>Dourado</p>
+            <select name="dourado" id="effectlist">
+              <option value="null">|| Selecione o Efeito ||</option>
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 1% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 1.5% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 2% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 2.5% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 3% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 3.5% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 4% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 5% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 1% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 1.5% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 2% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 2.5% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 3% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 3.5% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 4% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 5% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 1% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 1.5% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 2% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 2.5% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 3% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 3.5% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 4% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 5% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 3% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 4% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 5% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 6% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 7% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 8% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 9% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 10% por 5 segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 3% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 4% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 5% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 6% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 7% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 8% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 9% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 10% por 5
+                segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 1% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 1.5% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 2% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 2.5% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 3% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 3.5% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 4% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 5% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em [0.5*Nv. de Aprimoramento]%
+                por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 3% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 4% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 5% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 6% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 7% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 8% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 9% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 10% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 1% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 1.5% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 2% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 2.5% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 3% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 3.5% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 4% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 5% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 1% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 1.5% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 2% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 2.5% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 3% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 3.5% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 4% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 1% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 1.5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 2% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 2.5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 3% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 3.5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 4% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 1% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 1.5% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 2% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 2.5% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 3% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 3.5% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 4% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 5% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="hp">aumentar o HP em 3% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 4% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 5% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 6% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 7% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 8% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 9% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 10% por 5 segundos</option>
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 3% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 4% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 5% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 6% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 7% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 8% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 9% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 10% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em [1*Nv. de
+                Aprimoramento]% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 1% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 1.5% por 5
+                segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 2% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 2.5% por 5
+                segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 3% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 3.5% por 5
+                segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 4% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 5% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 3% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 4% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 5% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 6% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 7% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 8% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 9% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 10% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 3% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 4% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 5% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 6% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 7% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 8% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 9% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 10% por 5 segundos
+              </option>
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 3% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 4% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 5% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 6% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 7% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 8% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 9% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 10% por 5 segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 1% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 1.5% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 2% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 2.5% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 3% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 3.5% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 4% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 5% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em [0.5*Nv. de
+                Aprimoramento]% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 1% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 1.5% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 2% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 2.5% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 3% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 3.5% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 4% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 5% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em [0.5*Nv. de Aprimoramento]%
+                por 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 1% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 1.5% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 2% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 2.5% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 3% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 3.5% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 4% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 5% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 3% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 4% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 5% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 6% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 7% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 8% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 9% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 10% HP por seg. durante 5 segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 15 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 20 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 25 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 30 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 35 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 40 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 45 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 55 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em [5*Nv. de
+                Aprimoramento] por 5 segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 1% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 2% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 3% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 4% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 5% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 6% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 7% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 8% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 1% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 3% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 5% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 7% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 9% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 11% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 13% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 15% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 3% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 4% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 5% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 6% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 7% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 8% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 9% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 10% por 5
+                segundos</option
+              >
+            </select>
+          </div>
+        </form>
+      </div>
+      <div id="efeito2" style="display: none; text-align: center;">
+        <form id="segundo">
+          <h2>Efeito 2</h2>
+          <div>
+            <p>Escarlate</p>
+            <select name="escarlate2" id="causelist2">
+              <option value="null">|| Selecione a Causa ||</option>
+            </select>
+          </div>
+          <div>
+            <p>Cerúleo</p>
+            <select name="ceruleo2" id="chancelist2">
+              <option value="null">|| Selecione a Chance ||</option>
+            </select>
+          </div>
+          <div>
+            <p>Dourado</p>
+            <select name="dourado2" id="effectlist2">
+              <option value="null">|| Selecione o Efeito ||</option>
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 1% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 1.5% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 2% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 2.5% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 3% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 3.5% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 4% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em 5% por 5 segundos</option
+              >
+              <option value="ataquefisico"
+                >aumentar o Ataque Físico em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 1% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 1.5% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 2% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 2.5% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 3% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 3.5% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 4% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em 5% por 5 segundos</option
+              >
+              <option value="ataquemagico"
+                >aumentar o Ataque Mágico em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 1% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 1.5% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 2% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 2.5% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 3% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 3.5% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 4% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em 5% por 5 segundos</option
+              >
+              <option value="danocritico"
+                >aumentar o Dano Crítico em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 3% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 4% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 5% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 6% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 7% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 8% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 9% por 5 segundos</option
+              >
+              <option value="critico"
+                >aumentar o Crítico em 10% por 5 segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 3% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 4% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 5% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 6% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 7% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 8% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 9% por 5
+                segundos</option
+              >
+              <option value="maximizacao"
+                >aumentar a Maximização será aumentada em 10% por 5
+                segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 1% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 1.5% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 2% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 2.5% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 3% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 3.5% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 4% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em 5% por 5 segundos</option
+              >
+              <option value="danohabilidade"
+                >aumentar o Dano de Habilidades em [0.5*Nv. de Aprimoramento]%
+                por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 3% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 4% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 5% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 6% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 7% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 8% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 9% por 5 segundos</option
+              >
+              <option value="danoadicional"
+                >aumentar o Dano Adicional em 10% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 1% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 1.5% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 2% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 2.5% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 3% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 3.5% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 4% por 5 segundos</option
+              >
+              <option value="ignorardefesa"
+                >de Ignorar Defesa em 5% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 1% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 1.5% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 2% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 2.5% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 3% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 3.5% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 4% por 5 segundos</option
+              >
+              <option value="danochefe"
+                >aumentar o Dano causado a Chefes em 5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 1% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 1.5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 2% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 2.5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 3% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 3.5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 4% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em 5% por 5 segundos</option
+              >
+              <option value="defesafisica"
+                >aumentar a Defesa Física em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 1% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 1.5% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 2% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 2.5% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 3% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 3.5% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 4% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em 5% por 5 segundos</option
+              >
+              <option value="defesamagica"
+                >aumentar a Defesa Mágica em [0.5*Nv. de Aprimoramento]% por 5
+                segundos</option
+              >
+              <option value="hp">aumentar o HP em 3% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 4% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 5% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 6% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 7% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 8% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 9% por 5 segundos</option>
+              <option value="hp">aumentar o HP em 10% por 5 segundos</option>
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 3% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 4% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 5% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 6% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 7% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 8% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 9% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em 10% por 5
+                segundos</option
+              >
+              <option value="reducaodano"
+                >aumentar a Redução de Dano do Grupo em [1*Nv. de
+                Aprimoramento]% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 1% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 1.5% por 5
+                segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 2% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 2.5% por 5
+                segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 3% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 3.5% por 5
+                segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 4% por 5 segundos</option
+              >
+              <option value="defesachefe"
+                >reduzir o Dano recebido de Chefes em 5% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 3% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 4% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 5% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 6% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 7% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 8% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 9% por 5 segundos</option
+              >
+              <option value="velocidadeacao"
+                >aumentar a Velocidade de Ação em 10% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 3% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 4% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 5% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 6% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 7% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 8% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 9% por 5 segundos</option
+              >
+              <option value="velocidademovimento"
+                >aumentar a Velocidade de Movimento em 10% por 5 segundos
+              </option>
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 3% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 4% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 5% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 6% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 7% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 8% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 9% por 5 segundos</option
+              >
+              <option value="velocidadesalto"
+                >aumentar a Velocidade de Salto em 10% por 5 segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 1% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 1.5% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 2% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 2.5% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 3% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 3.5% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 4% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em 5% por 5
+                segundos</option
+              >
+              <option value="esperahabilidade"
+                >reduzir o Tempo de Espera de Habilidades em [0.5*Nv. de
+                Aprimoramento]% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 1% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 1.5% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 2% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 2.5% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 3% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 3.5% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 4% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em 5% por 5 segundos</option
+              >
+              <option value="todasvelocidades"
+                >aumentar Todas as Velocidades em [0.5*Nv. de Aprimoramento]%
+                por 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 1% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 1.5% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 2% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 2.5% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 3% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 3.5% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 4% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarmp"
+                >recuperar 5% MP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 3% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 4% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 5% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 6% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 7% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 8% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 9% HP por seg. durante 5 segundos</option
+              >
+              <option value="recuperarhp"
+                >recuperar 10% HP por seg. durante 5 segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 15 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 20 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 25 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 30 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 35 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 40 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 45 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em 55 por 5
+                segundos</option
+              >
+              <option value="resistencias"
+                >diminuir as resistências dos inimigos em [5*Nv. de
+                Aprimoramento] por 5 segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 1% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 2% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 3% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 4% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 5% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 6% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 7% por 5
+                segundos</option
+              >
+              <option value="customp"
+                >reduzir o Custo de MP de Habilidades em 8% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 1% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 3% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 5% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 7% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 9% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 11% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 13% por 5
+                segundos</option
+              >
+              <option value="efeitoitem"
+                >aumentar os Efeitos de Itens de Recuperação em 15% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 3% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 4% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 5% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 6% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 7% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 8% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 9% por 5
+                segundos</option
+              >
+              <option value="esperaitem"
+                >reduzir o Tempo de Espera de Itens de Recuperação em 10% por 5
+                segundos</option
+              >
+            </select>
+          </div>
+        </form>
+        <div></div>
+      </div>
+    
+    <br />
+    <div id="confirm" style="display: none; text-align: center; font-weight: bold;">
+      <button type="button" onclick="return writeresult();">Confirmar</button>
+      <br />
+      <p id="result"></p>
+      <p id="result2"></p>
+    </div>
+</div>
+  </body>
+  <footer>
+    <script src="gravura.js"></script>
+  </footer>
+</html>
